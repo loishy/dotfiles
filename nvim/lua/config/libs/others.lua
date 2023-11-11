@@ -9,16 +9,12 @@ M.colorizer = function()
 end
 
 M.luasnip = function()
-  local present, luasnip = pcall(require, "luasnip")
-  if present then
-    luasnip.config.set_config {
-      history = true,
-      updateevents = "TextChanged,TextChangedI"
-    }
-    require("luasnip/loaders/from_vscode").load {
-      paths = vim.fn.stdpath "config" .. "/snippets"
-    }
-  end
+  require("luasnip.loaders.from_vscode").lazy_load()
+  require 'luasnip'.filetype_extend("ruby", { "rails" })
+
+  require("luasnip/loaders/from_vscode").load {
+    paths = vim.fn.stdpath "config" .. "/snippets"
+  }
 end
 
 return M
