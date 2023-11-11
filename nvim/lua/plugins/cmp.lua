@@ -1,3 +1,4 @@
+-- Custom all CMP plugins for tab completion and snippets
 return {
   {"rafamadriz/friendly-snippets", event = "InsertEnter"}, {
     "hrsh7th/nvim-cmp",
@@ -9,6 +10,7 @@ return {
     config = function() require("config.libs.others").luasnip() end
   }, {"saadparwaiz1/cmp_luasnip", dependencies = {"LuaSnip"}},
   {"hrsh7th/cmp-calc", dependencies = {"nvim-cmp"}}, {"hrsh7th/cmp-nvim-lsp"},
+  {"hrsh7th/cmp-cmdline", dependencies = {'nvim-cmp'}},
   {"hrsh7th/cmp-buffer", dependencies = {"nvim-cmp"}}, {
     "github/copilot.vim",
     event = "VeryLazy",
@@ -30,5 +32,5 @@ return {
         ["*"] = false
       }
     end
-  }, {"hrsh7th/cmp-cmdline", dependencies = {'nvim-cmp'}}
+  }
 }

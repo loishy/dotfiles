@@ -35,7 +35,7 @@ draw_bold_text_with_bright_colors: false
 colors:
   # Edge
   primary:
-    background: "#292C33"
+    background: "#111317"
     foreground: "#E0E0E0"
   # Normal colors
   normal:

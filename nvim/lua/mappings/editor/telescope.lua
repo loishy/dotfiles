@@ -6,9 +6,6 @@ local opt = {silent = true, noremap = true}
 vim.keymap.set("n", "<c-p>", ":Telescope find_files hidden=true<cr>", opt)
 vim.keymap.set("n", "<leader><leader>", ":Telescope buffers<CR>", opt)
 vim.keymap.set("n", "<leader>/", ":Telescope live_grep<CR>", opt)
-vim.api.nvim_set_keymap("n", "<leader>fb",
-                        ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
-                        opt)
 vim.keymap.set("n", "<leader>fm", ":Telescope marks<CR>", opt)
 vim.keymap.set("n", "<leader>fj", ":Telescope jumplist<CR>", opt)
 vim.keymap.set("n", "<c-m>", function()
@@ -25,7 +22,6 @@ vim.keymap.set("n", "<leader>td", ":TodoTelescope<CR>", opt)
 vim.keymap.set("n", "<leader>f/", ":Telescope current_buffer_fuzzy_find<CR>",
                opt)
 vim.keymap.set("n", "<leader>fn", ":Telescope notify <CR>", opt)
-vim.keymap.set("n", "<leader>fc", ":Telescope flutter commands<CR>", opt)
 vim.keymap.set("n", "<leader>fr",
                ":Telescope oldfiles previewer=false cwd_only=true<CR>", opt)
 

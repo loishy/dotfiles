@@ -15,7 +15,7 @@ return {
       cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
     end
   }, {'numToStr/Comment.nvim'}, {'tpope/vim-eunuch'},
-  {'mg979/vim-visual-multi'}, {'tpope/vim-surround'}, {'chrisbra/NrrwRgn'}, {
+  {'mg979/vim-visual-multi'}, {'tpope/vim-surround'}, {
     "andymass/vim-matchup",
     init = function() vim.g.matchup_matchparen_offscreen = {method = "popup"} end
   }, {'preservim/vimux'}, {
@@ -27,7 +27,6 @@ return {
     'norcalli/nvim-colorizer.lua',
     config = function() require'colorizer'.setup() end
   }, {'chentoast/marks.nvim', config = function() require'marks'.setup() end},
-  {'loishy/draft-buff', dependencies = {'MunifTanjim/nui.nvim'}},
   {"rest-nvim/rest.nvim"}, {'mbbill/undotree'}, -- Flash Nvim
   {
     "folke/flash.nvim",
